@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DangKyHocLai" Class="dbDKHLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TAKKJE-PC\KIEJET;Initial Catalog=DangKyHocLai;Integrated Security=True" SettingsObjectName="DangKyHocLai.Properties.Settings" SettingsPropertyName="DangKyHocLaiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DangKyMon" Member="DangKyMons">
+    <Type Name="DangKyMon">
+      <Column Name="MaDK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaSV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayDK" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="MonHoc_DangKyMon" Member="MonHoc" ThisKey="MaMH" OtherKey="MaMH" Type="MonHoc" IsForeignKey="true" />
+      <Association Name="SinhVien_DangKyMon" Member="SinhVien" ThisKey="MaSV" OtherKey="MaSV" Type="SinhVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoanDangNhap" Member="TaiKhoanDangNhaps">
+    <Type Name="TaiKhoanDangNhap">
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Diem" Member="Diems">
+    <Type Name="Diem">
+      <Column Name="MaDiem" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaSV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiemQT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemThi" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DSDangKy" Member="DSDangKies">
+    <Type Name="DSDangKy">
+      <Column Name="MaKiemSoat" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GiangVien" Member="GiangViens">
+    <Type Name="GiangVien">
+      <Column Name="MaGV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lop" Member="Lops">
+    <Type Name="Lop">
+      <Column Name="MaKiemSoat" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaSV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonHoc" Member="MonHocs">
+    <Type Name="MonHoc">
+      <Column Name="MaMH" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TinChi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MonHoc_DangKyMon" Member="DangKyMons" ThisKey="MaMH" OtherKey="MaMH" Type="DangKyMon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SinhVien" Member="SinhViens">
+    <Type Name="SinhVien">
+      <Column Name="MaSV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="SinhVien_DangKyMon" Member="DangKyMons" ThisKey="MaSV" OtherKey="MaSV" Type="DangKyMon" />
+    </Type>
+  </Table>
+</Database>

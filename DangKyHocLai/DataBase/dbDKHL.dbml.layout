@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="dbDKHL">
+  <DataContextMoniker Name="/dbDKHLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="354046c8-50cd-4633-8e14-07ad873d2a9f" absoluteBounds="3.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbDKHLDataContext/DangKyMon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e96c5b1d-8ffe-4be1-957d-553b699538bd" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da883b92-3cad-43f9-869f-db0b30e40eae" absoluteBounds="3.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbDKHLDataContext/TaiKhoanDangNhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="075c53a3-5d55-4e22-b91a-f48158099d52" absoluteBounds="3.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a8a468d-03f4-4b24-afc2-efae0e7de752" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/dbDKHLDataContext/Diem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd1fe74e-1457-4842-8aa1-86c8e3bf3f08" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a845d5d4-2124-4d66-928c-d44c0d9790e8" absoluteBounds="6.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbDKHLDataContext/DSDangKy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9549b740-1dc6-489f-b676-b256bc25a9fd" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61cefc95-17dc-464b-b339-51c68027fe1f" absoluteBounds="3.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dbDKHLDataContext/GiangVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57c4f552-2782-4f8e-bfb5-19f4ced2e1d8" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66a9b7c7-7205-4016-9bd9-226960be5fc1" absoluteBounds="6.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbDKHLDataContext/Lop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e39b268-bae8-4be0-bd02-c7eedc08692c" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b05bf3ee-e0a8-4d5d-82ec-bceb9f3092b9" absoluteBounds="0.75, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbDKHLDataContext/MonHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1d97da5-3237-4cd3-a2ce-f4156476fa30" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c38ff6fc-06a3-4050-9378-21c39b7d480d" absoluteBounds="0.75, 4.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dbDKHLDataContext/SinhVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53746525-b954-4363-bb89-01f37db63df7" absoluteBounds="0.765, 5.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.81814697265625); (3.5 : 1.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDKHLDataContext/MonHoc/MonHoc_DangKyMon" />
+      <nodes>
+        <classShapeMoniker Id="b05bf3ee-e0a8-4d5d-82ec-bceb9f3092b9" />
+        <classShapeMoniker Id="354046c8-50cd-4633-8e14-07ad873d2a9f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.94314697265625); (3.59375 : 5.94314697265625); (3.59375 : 2.64589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDKHLDataContext/SinhVien/SinhVien_DangKyMon" />
+      <nodes>
+        <classShapeMoniker Id="c38ff6fc-06a3-4050-9378-21c39b7d480d" />
+        <classShapeMoniker Id="354046c8-50cd-4633-8e14-07ad873d2a9f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
